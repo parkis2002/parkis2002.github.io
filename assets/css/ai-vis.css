@@ -1,0 +1,168 @@
+/* =========================================================
+   AI Learning Visualization
+   Chirpy / Jekyll compatible
+   ========================================================= */
+
+.ai-viz {
+  width: 100%;
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 1px solid var(--main-border-color);
+  border-radius: 12px;
+  background: var(--card-bg);
+  box-sizing: border-box;
+}
+
+.ai-viz-title {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.ai-viz-description {
+  margin: 0 0 1rem;
+  color: var(--text-muted-color);
+  font-size: 0.9rem;
+}
+
+.ai-viz-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ai-viz svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 280px;
+}
+
+.ai-viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+  background: var(--sidebar-bg);
+}
+
+.ai-viz-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.ai-viz-control input[type="range"] {
+  width: 150px;
+}
+
+.ai-viz-value {
+  min-width: 60px;
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.ai-viz-equation {
+  margin-top: 0.8rem;
+  text-align: center;
+  font-family: monospace;
+  font-size: 0.95rem;
+}
+
+.ai-viz-info {
+  margin-top: 0.8rem;
+  padding: 0.7rem 0.9rem;
+  border-left: 3px solid var(--link-color);
+  background: var(--blockquote-bg);
+  font-size: 0.88rem;
+}
+
+/* SVG */
+
+.ai-viz .axis {
+  stroke: var(--text-color);
+  stroke-width: 1;
+  opacity: 0.5;
+}
+
+.ai-viz .grid {
+  stroke: var(--main-border-color);
+  stroke-width: 0.7;
+  opacity: 0.45;
+}
+
+.ai-viz .vector {
+  stroke: var(--link-color);
+  stroke-width: 3;
+  fill: none;
+}
+
+.ai-viz .vector-secondary {
+  stroke: #e76f51;
+  stroke-width: 3;
+  fill: none;
+}
+
+.ai-viz .vector-result {
+  stroke: #2a9d8f;
+  stroke-width: 3;
+  fill: none;
+}
+
+.ai-viz .point {
+  fill: var(--link-color);
+}
+
+.ai-viz .point-secondary {
+  fill: #e76f51;
+}
+
+.ai-viz .label {
+  fill: var(--text-color);
+  font-size: 13px;
+  font-family: sans-serif;
+}
+
+.ai-viz .small-label {
+  fill: var(--text-muted-color);
+  font-size: 11px;
+}
+
+.ai-viz .embedding-point {
+  cursor: grab;
+}
+
+.ai-viz .embedding-point:active {
+  cursor: grabbing;
+}
+
+.ai-viz button {
+  border: 1px solid var(--main-border-color);
+  border-radius: 6px;
+  padding: 0.35rem 0.7rem;
+  background: var(--card-bg);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.ai-viz button:hover {
+  background: var(--button-bg);
+}
+
+@media (max-width: 768px) {
+  .ai-viz-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ai-viz-control {
+    justify-content: space-between;
+  }
+
+  .ai-viz-control input[type="range"] {
+    flex: 1;
+  }
+}
